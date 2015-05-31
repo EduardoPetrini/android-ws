@@ -3,14 +3,8 @@
 
 # --- !Ups
 
-create table person (
-  id                        varchar(255) not null,
-  name                      varchar(255),
-  constraint pk_person primary key (id))
-;
-
 create table usuario (
-  id                        varchar(255) not null,
+  id                        integer not null,
   nome                      varchar(255),
   email                     varchar(255),
   senha                     varchar(255),
@@ -19,20 +13,25 @@ create table usuario (
 ;
 
 create table viagem (
-  id                        varchar(255) not null,
+  id                        integer not null,
+  status                    varchar(255),
   titulo                    varchar(255),
   data_partida              timestamp,
   data_chegada              timestamp,
   cidade_origem             varchar(255),
   cidade_destino            varchar(255),
   qtde_pessoas              integer,
-  custo_orçado              float,
+  custo_orcado              float,
   custo_real                float,
   constraint pk_viagem primary key (id))
 ;
 
-create sequence person_seq;
 
+create table viagem_usuario (
+  viagem_id                      integer not null,
+  usuario_id                     integer not null,
+  constraint pk_viagem_usuario primary key (viagem_id, usuario_id))
+;
 create sequence usuario_seq;
 
 create sequence viagem_seq;
@@ -40,15 +39,17 @@ create sequence viagem_seq;
 
 
 
-# --- !Downs
+alter table viagem_usuario add constraint fk_viagem_usuario_viagem_01 foreign key (viagem_id) references viagem (id);
 
-drop table if exists person cascade;
+alter table viagem_usuario add constraint fk_viagem_usuario_usuario_02 foreign key (usuario_id) references usuario (id);
+
+# --- !Downs
 
 drop table if exists usuario cascade;
 
 drop table if exists viagem cascade;
 
-drop sequence if exists person_seq;
+drop table if exists viagem_usuario cascade;
 
 drop sequence if exists usuario_seq;
 
