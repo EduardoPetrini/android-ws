@@ -21,3 +21,5 @@ GET    /viagem/:id           controllers.ViagemController.get(id: Integer)
 GET    /usuario/:id          controllers.UsuarioController.get(id: Integer)
 
 POST    /viagem/orcar          controllers.ViagemController.orcar()
+
+POST	/login				controllers.LoginController.login()
