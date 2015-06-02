@@ -26,8 +26,8 @@ public class ViagemController extends Controller {
 		viagem.status = "CRIADA";
 		viagem.dataPartida = textToDate(json.get("dataPartida").asText());
 		viagem.dataChegada = textToDate(json.get("dataChegada").asText());
-		viagem.cidadeOrigem = json.get("cidadeOrigem").asText();
-		viagem.cidadeDestino = json.get("cidadeDestino").asText();
+		viagem.cidadeOrigem = json.get("origem").asText();
+		viagem.cidadeDestino = json.get("destino").asText();
 		viagem.qtdePessoas = json.get("qtdePessoas").asInt();
 		viagem.custoOrcado = 0;
 		viagem.custoReal= 0;
