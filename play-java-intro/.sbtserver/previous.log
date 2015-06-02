@@ -1,5 +1,5 @@
-New log file opened at Mon Jun 01 19:49:43 BRT 2015 by 8840@Danilo-PCES
-jvm 8840@Danilo-PCES
+New log file opened at Tue Jun 02 15:14:53 BRT 2015 by 4468@Danilo-PCES
+jvm 4468@Danilo-PCES
 jvm vmName=Java HotSpot(TM) Client VM vmVendor=Oracle Corporation vmVersion=25.20-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -16484,7 +16484,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8-M3!apply-macro.jar
 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-:: resolution report :: resolve 7134ms :: artifacts dl 267ms
+:: resolution report :: resolve 6999ms :: artifacts dl 286ms
 	report for default#play-java-intro-build;0.1-SNAPSHOT compile produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\project\target\resolution-cache\reports\default-play-java-intro-build-compile.xml
 	report for default#play-java-intro-build;0.1-SNAPSHOT runtime produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\project\target\resolution-cache\reports\default-play-java-intro-build-runtime.xml
 	report for default#play-java-intro-build;0.1-SNAPSHOT test produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\project\target\resolution-cache\reports\default-play-java-intro-build-test.xml
@@ -16498,7 +16498,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	report for default#play-java-intro-build;0.1-SNAPSHOT docs produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\project\target\resolution-cache\reports\default-play-java-intro-build-docs.xml
 	report for default#play-java-intro-build;0.1-SNAPSHOT pom produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\project\target\resolution-cache\reports\default-play-java-intro-build-pom.xml
 	report for default#play-java-intro-build;0.1-SNAPSHOT scala-tool produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\project\target\resolution-cache\reports\default-play-java-intro-build-scala-tool.xml
-	resolve done (7134ms resolve - 267ms download)
+	resolve done (6999ms resolve - 286ms download)
 [info] Done updating.
 Done updating.
 
@@ -16540,7 +16540,7 @@ Set current project to play-java-intro (in build file:/C:/Users/danilo/TrabalhoL
 > server-handle-next-server-request
 > {file:/C:/Users/danilo/TrabalhoLP3/android-ws/play-java-intro/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@16a5b43, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@133fbca, check cycles: false
 Read from stdout: Updating {file:/C:/Users/danilo/TrabalhoLP3/android-ws/play-java-intro/}root...
 Updating {file:/C:/Users/danilo/TrabalhoLP3/android-ws/play-java-intro/}root...
 Other repositories:
@@ -16555,7 +16555,7 @@ resolving dependencies for configuration 'compile'
 == resolving dependencies play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 Read from stdout: Resolving org.scala-lang#scala-library;2.10.4 ...
 Resolving org.scala-lang#scala-library;2.10.4 ...
-sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@63f346
+sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@dde42f
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
 	[2.10.4] org.scala-lang#scala-library;2.10.4
@@ -23103,7 +23103,7 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	[NOT REQUIRED] org.scala-sbt#control;0.13.8-M3!control.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.10;2.3.8!akka-actor_2.10.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.10;2.3.8!akka-testkit_2.10.jar
-:: resolution report :: resolve 3098ms :: artifacts dl 160ms
+:: resolution report :: resolve 3344ms :: artifacts dl 198ms
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT compile produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.10-compile.xml
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT runtime produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.10-runtime.xml
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT test produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.10-test.xml
@@ -23118,44 +23118,198 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT pom produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.10-pom.xml
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT scala-tool produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.10-scala-tool.xml
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT fork-run produced in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.10-fork-run.xml
-	resolve done (3098ms resolve - 160ms download)
+	resolve done (3344ms resolve - 198ms download)
 Read from stdout: Done updating.
 Done updating.
-Total time: 4 s, completed 01-jun-2015 19:50:06
+Total time: 4 s, completed 02-jun-2015 15:15:16
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@17cda5d, check cycles: false
-Total time: 0 s, completed 01-jun-2015 19:50:07
+Running task... Cancel: sbt.server.ServerTaskCancellation@e16425, check cycles: false
+Total time: 0 s, completed 02-jun-2015 15:15:17
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/danilo/TrabalhoLP3/android-ws/play-java-intro/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@fc0ebe, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@f409f4, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set()
+	modified: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
+Initial directly invalidated sources: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java)
 
+Read from stdout: Compiling 1 Java source to C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes...
+Compiling 1 Java source to C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@18b12a7 directly...
+Java compilation took 0.696672809 s
+Java analysis took 0.193906608 s
+Java compile + analysis took 0.934895091 s
+Invalidating C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java...
+Invalidating (transitively) by inheritance from C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java...
+Initial set of included nodes: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java)
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java
+Invalidated by transitive inheritance dependency: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java)
+The C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java source file has the following regular definitions changed:
+	id, UsuarioApi.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java
+New invalidations:
+	Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java)
+Initial set of included nodes: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java)
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_reverseRouting.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\controllers\routes.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_reverseRouting.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\main.template.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\controllers\routes.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\index.template.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\main.template.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\Application.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\index.template.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_routing.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\Application.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java)
+Read from stdout: Compiling 4 Java sources to C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes...
+Compiling 4 Java sources to C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@18b12a7 directly...
+Java compilation took 0.358476236 s
+Java analysis took 0.290871714 s
+Java compile + analysis took 0.675132819 s
+Invalidating C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java...
+Invalidating (transitively) by inheritance from C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java...
+Initial set of included nodes: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java)
+Invalidated by transitive inheritance dependency: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java)
+The C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java source file has the following regular definitions changed:
+	id.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java
+New invalidations:
+	Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java)
+Initial set of included nodes: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java)
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_reverseRouting.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\controllers\routes.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_reverseRouting.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\main.template.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\controllers\routes.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\index.template.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\main.template.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\Application.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\index.template.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_routing.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\Application.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
 Copy resource mappings: 
 	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\application.conf,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\application.conf)
 	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\evolutions,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\evolutions)
 	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\routes,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\routes)
 	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\evolutions\default,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\evolutions\default)
 	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\evolutions\default\1.sql,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\evolutions\default\1.sql)
-Total time: 2 s, completed 01-jun-2015 19:50:16
+Total time: 4 s, completed 02-jun-2015 15:15:21
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/danilo/TrabalhoLP3/android-ws/play-java-intro/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1693c08, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes...
+Compiling 1 Java source to C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@1dab581 directly...
+Java compilation took 0.215435308 s
+Java analysis took 0.085155701 s
+Java compile + analysis took 0.335459878 s
+Invalidating C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java...
+Invalidating (transitively) by inheritance from C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java...
+Initial set of included nodes: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java)
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java
+Invalidated by transitive inheritance dependency: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java)
+The C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java source file has the following regular definitions changed:
+	id, UsuarioApi.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\UsuarioApi.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java
+New invalidations:
+	Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java)
+Initial set of included nodes: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java)
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_reverseRouting.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\controllers\routes.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_reverseRouting.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\main.template.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\controllers\routes.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\index.template.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\main.template.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\Application.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\index.template.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_routing.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\Application.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java)
+Read from stdout: Compiling 4 Java sources to C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes...
+Compiling 4 Java sources to C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@1dab581 directly...
+Java compilation took 0.333275859 s
+Java analysis took 0.184001548 s
+Java compile + analysis took 0.54837248 s
+Invalidating C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java...
+Invalidating (transitively) by inheritance from C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java...
+Initial set of included nodes: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java)
+Invalidated by transitive inheritance dependency: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java)
+The C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java source file has the following regular definitions changed:
+	id.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\models\Usuario.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java
+New invalidations:
+	Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java)
+Initial set of included nodes: Set(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\ViagemController.java, C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\UsuarioController.java)
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_reverseRouting.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\LoginController.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\controllers\routes.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_reverseRouting.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\main.template.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\controllers\routes.java
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\index.template.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\main.template.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\Application.java by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\twirl\main\views\html\index.template.scala
+Including C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\src_managed\main\routes_routing.scala by C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\app\controllers\Application.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\application.conf,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\application.conf)
+	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\evolutions,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\evolutions)
+	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\routes,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\routes)
+	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\evolutions\default,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\evolutions\default)
+	(C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\conf\evolutions\default\1.sql,C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\target\scala-2.10\classes\evolutions\default\1.sql)
+Total time: 2 s, completed 02-jun-2015 15:16:30
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -23164,4 +23318,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 8840@Danilo-PCES logs at Mon Jun 01 19:52:45 BRT 2015, goodbye.
+Closing the 4468@Danilo-PCES logs at Tue Jun 02 15:17:54 BRT 2015, goodbye.

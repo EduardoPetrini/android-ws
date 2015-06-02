@@ -10,7 +10,9 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 public class LoginController extends Controller {
 
 	public static Result login() {
+
 		JsonNode json = request().body().asJson();
+		
 		ObjectNode result = play.libs.Json.newObject();
 		result.put("status", "OK");
 		

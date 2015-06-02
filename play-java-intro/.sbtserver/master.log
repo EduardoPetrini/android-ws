@@ -1,5 +1,5 @@
-New log file opened at Mon Jun 01 19:52:53 BRT 2015 by 9200@Danilo-PCES
-jvm 9200@Danilo-PCES
+New log file opened at Tue Jun 02 15:18:02 BRT 2015 by 6004@Danilo-PCES
+jvm 6004@Danilo-PCES
 jvm vmName=Java HotSpot(TM) Client VM vmVendor=Oracle Corporation vmVersion=25.20-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\project, returning: (play-java-intro-build)
 Loading project definition from C:\Users\danilo\TrabalhoLP3\android-ws\play-java-intro\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@e56c59, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@4bad50, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -65,10 +65,3 @@ Set current project to play-java-intro (in build file:/C:/Users/danilo/TrabalhoL
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-Done executing sbt server engine, result Right(Exit(0))
-Closing listening server socket
-Waiting for socket thread
-Waiting for request processor thread
-Waiting for command engine result
-Returning control to sbt launcher with result Exit(0)
-Closing the 9200@Danilo-PCES logs at Mon Jun 01 21:52:53 BRT 2015, goodbye.

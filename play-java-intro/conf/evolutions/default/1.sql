@@ -5,11 +5,19 @@
 
 create table usuario (
   id                        integer not null,
+  id_aplicacao              integer,
   nome                      varchar(255),
   email                     varchar(255),
   senha                     varchar(255),
   cargo                     varchar(255),
   constraint pk_usuario primary key (id))
+;
+
+create table usuario_api (
+  id                        integer not null,
+  id_aplicacao              integer,
+  nome                      varchar(255),
+  constraint pk_usuario_api primary key (id))
 ;
 
 create table viagem (
@@ -34,6 +42,8 @@ create table viagem_usuario (
 ;
 create sequence usuario_seq;
 
+create sequence usuario_api_seq;
+
 create sequence viagem_seq;
 
 
@@ -47,11 +57,15 @@ alter table viagem_usuario add constraint fk_viagem_usuario_usuario_02 foreign k
 
 drop table if exists usuario cascade;
 
+drop table if exists usuario_api cascade;
+
 drop table if exists viagem cascade;
 
 drop table if exists viagem_usuario cascade;
 
 drop sequence if exists usuario_seq;
+
+drop sequence if exists usuario_api_seq;
 
 drop sequence if exists viagem_seq;
 

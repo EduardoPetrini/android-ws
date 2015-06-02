@@ -24,6 +24,7 @@ public class UsuarioController extends Controller {
 		user.email = json.get("email").asText();
 		user.senha = json.get("senha").asText();
 		user.cargo = json.get("cargo").asText();
+		user.id_aplicacao =0;
 		
 		user.save();
 		
