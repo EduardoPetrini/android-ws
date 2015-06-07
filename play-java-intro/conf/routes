@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+#For user register
+POST    /usuario/cadastrar          controllers.UsuarioController.cadastrar()
+POST    /viagem/cadastrar          controllers.ViagemController.cadastrar()
+
+GET    /viagem/getAll          controllers.ViagemController.getAll()
+GET    /usuario/getAll          controllers.UsuarioController.getAll()
+
+GET    /viagem/usuario/:userid           controllers.ViagemController.getByUser(userid: Integer)
+
+GET    /viagem/:id           controllers.ViagemController.get(id: Integer)
+GET    /usuario/:id          controllers.UsuarioController.get(id: Integer)
+
+POST    /viagem/orcar          controllers.ViagemController.orcar()
+
+POST	/login				controllers.LoginController.login()
