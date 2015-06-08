@@ -1,11 +1,13 @@
 package controllers;
 
-import models.Usuario;
 import play.mvc.Controller;
 import play.mvc.Result;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.lp3.Usuario;
+
+import dao.UsuarioDao;
 
 public class LoginController extends Controller {
 
@@ -19,7 +21,7 @@ public class LoginController extends Controller {
 		String email = json.get("email").asText();
 		String senha = json.get("senha").asText();
 		
-		Usuario usuario = Usuario.find.where().eq("email", email).findUnique();
+		Usuario usuario = UsuarioDao.find.where().eq("email", email).findUnique();
 		
 		if(usuario != null){
 			if(usuario.senha.equals(senha)){

@@ -2,8 +2,6 @@ package controllers;
 
 import java.util.List;
 
-import models.Usuario;
-import models.Viagem;
 import play.mvc.BodyParser;
 import play.mvc.BodyParser.Json;
 import play.mvc.Controller;
@@ -11,6 +9,10 @@ import play.mvc.Result;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.lp3.Usuario;
+import com.lp3.Viagem;
+
+import dao.UsuarioDao;
 
 public class UsuarioController extends Controller {
 
@@ -23,8 +25,8 @@ public class UsuarioController extends Controller {
 		user.nome = json.get("nome").asText();
 		user.email = json.get("email").asText();
 		user.senha = json.get("senha").asText();
-		user.cargo = json.get("cargo").asText();
-		user.id_aplicacao =0;
+//		user.cargo = json.get("cargo").asText();
+//		user.id_aplicacao =0;
 		
 		user.save();
 		
@@ -39,7 +41,7 @@ public class UsuarioController extends Controller {
 	public static Result getAll(){
 		ObjectNode result = play.libs.Json.newObject();
 		
-		List<Usuario> users = Usuario.find.all();
+		List<Usuario> users = UsuarioDao.find.all();
 		if(users.size() > 0){
 			result.put("Qtde Usuarios", users.size());
 			result.put("Usuarios", play.libs.Json.toJson(users));
@@ -52,7 +54,7 @@ public class UsuarioController extends Controller {
 	public static Result get(Integer id){
 		ObjectNode result = play.libs.Json.newObject();
 		
-		Usuario usuario = Usuario.find.byId(id);
+		Usuario usuario = UsuarioDao.find.byId(id);
 		if(usuario != null){
 			result.put("Usuario", play.libs.Json.toJson(usuario));
 		}else{

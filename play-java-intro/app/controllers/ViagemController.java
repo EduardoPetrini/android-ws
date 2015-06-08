@@ -5,8 +5,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import models.Usuario;
-import models.Viagem;
 import play.mvc.BodyParser;
 import play.mvc.BodyParser.Json;
 import play.mvc.Controller;
@@ -14,6 +12,11 @@ import play.mvc.Result;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.lp3.Usuario;
+import com.lp3.Viagem;
+
+import dao.UsuarioDao;
+import dao.ViagemDao;
 
 public class ViagemController extends Controller {
 
@@ -32,7 +35,7 @@ public class ViagemController extends Controller {
 		viagem.custoOrcado = 0;
 		viagem.custoReal= 0;
 		Integer userId = json.get("usuarioId").asInt();
-		Usuario user = Usuario.find.byId(userId);
+		Usuario user = UsuarioDao.find.byId(userId);
 		viagem.usuarios = new ArrayList<Usuario>();
 		viagem.usuarios.add(user);
 		
@@ -66,7 +69,7 @@ public class ViagemController extends Controller {
 	public static Result getAll(){
 		ObjectNode result = play.libs.Json.newObject();
 		
-		List<Viagem> viagem = Viagem.find.all();
+		List<Viagem> viagem = ViagemDao.find.all();
 		if(viagem.size() > 0){
 			result.put("Qtde Viagens", viagem.size());
 			result.put("Viagens", play.libs.Json.toJson(viagem));
@@ -79,7 +82,7 @@ public class ViagemController extends Controller {
 	public static Result getByUser(Integer userId){
 		ObjectNode result = play.libs.Json.newObject();
 		
-		List<Viagem> viagem = Viagem.findByUser(userId);
+		List<Viagem> viagem = ViagemDao.findByUser(userId);
 		if(viagem.size() > 0){
 			result.put("Qtde Viagens", viagem.size());
 			result.put("Viagens", play.libs.Json.toJson(viagem));
@@ -92,7 +95,7 @@ public class ViagemController extends Controller {
 	public static Result get(Integer id){
 		ObjectNode result = play.libs.Json.newObject();
 		
-		Viagem viagem = Viagem.find.byId(id);
+		Viagem viagem = ViagemDao.find.byId(id);
 		if(viagem != null){
 			result.put("Viagem", play.libs.Json.toJson(viagem));
 		}else{
@@ -105,7 +108,7 @@ public class ViagemController extends Controller {
 		JsonNode json = request().body().asJson();
 		ObjectNode result = play.libs.Json.newObject();
 		
-		Viagem viagem = Viagem.find.byId(json.get("id").asInt());
+		Viagem viagem = ViagemDao.find.byId(json.get("id").asInt());
 		double valorOrcado = Double.parseDouble(json.get("custoOrcado").asText());
 		if(viagem != null){
 			viagem.custoOrcado = valorOrcado;

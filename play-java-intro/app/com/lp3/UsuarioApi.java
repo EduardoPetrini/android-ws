@@ -2,22 +2,22 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package models;
+package com.lp3;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.ManyToOne;
 import play.db.ebean.Model;
 /**
  *
- * @author Mariana
+ * @author Eduardo
  */
 @Entity
 public class UsuarioApi extends Model {
 	@Id
     public int id;
-    public int id_aplicacao;
+    public int idAplicacao;
     public String nome;
-    //private GrupoUsuario grupo_usuario;
-   
+    @ManyToOne
+    public GrupoUsuarioApi grupoUsuario;
 }

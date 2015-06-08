@@ -1,4 +1,4 @@
-package models;
+package com.lp3;
 
 import java.util.Date;
 import java.util.List;
@@ -27,11 +27,5 @@ public class Viagem extends Model{
 	@ManyToMany(cascade = CascadeType.REFRESH)
 	public List<Usuario> usuarios;
 		
-	public static Finder<Integer, Viagem> find = new Model.Finder<>(Integer.class, Viagem.class);
 	
-	public static List<Viagem> findByUser(Integer userId) {
-        return find.where()
-            .eq("usuarios.id", userId)
-            .findList();
-    }
 }

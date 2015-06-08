@@ -1,4 +1,4 @@
-package models;
+package com.lp3;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,7 +13,5 @@ public class Usuario extends UsuarioApi{
 
 	public String email;
 	public String senha;
-	public String cargo;	
 
-	public static Finder<Integer, Usuario> find = new Model.Finder<>(Integer.class, Usuario.class);
 }
