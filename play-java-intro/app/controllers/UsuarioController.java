@@ -9,9 +9,12 @@ import play.mvc.Result;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.lp3.Atividade;
+import com.lp3.GrupoUsuarioApi;
 import com.lp3.Usuario;
-import com.lp3.Viagem;
 
+import dao.AtividadeDao;
+import dao.GrupoUsuarioDao;
 import dao.UsuarioDao;
 
 public class UsuarioController extends Controller {
@@ -25,8 +28,8 @@ public class UsuarioController extends Controller {
 		user.nome = json.get("nome").asText();
 		user.email = json.get("email").asText();
 		user.senha = json.get("senha").asText();
-//		user.cargo = json.get("cargo").asText();
-//		user.id_aplicacao =0;
+		String cargo = json.get("cargo").asText();
+		user.grupoUsuario = getGrupoUsuarioByCargo(cargo.toUpperCase());
 		
 		user.save();
 		
@@ -38,6 +41,10 @@ public class UsuarioController extends Controller {
 		
     }
 	
+	private static GrupoUsuarioApi getGrupoUsuarioByCargo(String cargo) {
+		return GrupoUsuarioDao.find.where().eq("nome",cargo).findUnique(); 
+	}
+
 	public static Result getAll(){
 		ObjectNode result = play.libs.Json.newObject();
 		
@@ -59,6 +66,37 @@ public class UsuarioController extends Controller {
 			result.put("Usuario", play.libs.Json.toJson(usuario));
 		}else{
 			result.put("Mensagem: ","Não há usuario para esse id");
+		}
+		return ok(result);
+	}
+	
+	public static Result getAtividades(Integer id){
+		ObjectNode result = play.libs.Json.newObject();
+		
+		Usuario usuario = UsuarioDao.find.byId(id);
+		System.out.println("Obtendo as atividades do usuário: ");
+		usuario.print();
+		if(usuario != null){
+			if(usuario.grupoUsuario != null){
+				
+				List<Atividade> atividades = AtividadeDao.findByGroup(usuario.grupoUsuario.idBpms);
+				if(atividades != null && atividades.size() > 0){
+					
+					for(Atividade a: atividades){
+						a.print();
+						System.out.println();
+					}
+					result.put("atividades", play.libs.Json.toJson(atividades));
+				}else{
+					result.put("erro","Não há atividades para esse usuário.");
+				}
+				
+			}else{
+				result.put("erro","Usuário não possui grupo.");
+			}
+			
+		}else{
+			result.put("erro","Não há usuario para esse id: "+id);
 		}
 		return ok(result);
 	}

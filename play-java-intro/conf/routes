@@ -19,6 +19,7 @@ GET    /viagem/usuario/:userid           controllers.ViagemController.getByUser(
 
 GET    /viagem/:id           controllers.ViagemController.get(id: Integer)
 GET    /usuario/:id          controllers.UsuarioController.get(id: Integer)
+GET    /usuario/atividades/:id          controllers.UsuarioController.getAtividades(id: Integer)
 
 POST    /viagem/orcar          controllers.ViagemController.orcar()
 

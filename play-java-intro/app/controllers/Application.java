@@ -1,15 +1,14 @@
 package controllers;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.index;
+import views.html.*;
 
-import com.lp3.AtividadeApi;
+import com.lp3.Atividade;
 import com.lp3.GrupoUsuarioApi;
-import com.lp3.ParametroApi;
+import com.lp3.Parametros;
 import com.lp3.Usuario;
 import com.lp3.Viagem;
 
@@ -106,19 +105,15 @@ public class Application extends Controller {
     		viagem.save();
     	}
     	
-    	AtividadeApi atv = AtividadeDao.find.where().eq("idBpms", "1").findUnique();
+    	Atividade atv = AtividadeDao.find.where().eq("nome", "ORÇAMENTO").findUnique();
     	if(atv == null){
-    		atv = new AtividadeApi();
-    		atv.idBpms = "1";
+    		atv = new Atividade();
     		atv.nome = "ORÇAMENTO";
-    		atv.grupoUsuario = GrupoUsuarioDao.find.where().eq("idBpms", "3").findUnique();
-    		ParametroApi p = new ParametroApi();
-    		p.idBpms = "1";
-    		p.nome = "com.lp3.Viagem";
-    		p.valor = String.valueOf(viagem.id);
-    		p.save();
-    		atv.parametros = new ArrayList<ParametroApi>();
-    		atv.parametros.add(p);
+    		atv.grupoUsuario = GrupoUsuarioDao.find.where().eq("idBpms", "4").findUnique();
+    		atv.parametros = new Parametros();
+    		atv.parametros.entityNome = "com.lp3.Viagem";
+    		atv.parametros.entityId = String.valueOf(viagem.id);
+    		atv.parametros.save();
     		atv.save();
     	}
     	

@@ -22,7 +22,7 @@ public class LoginController extends Controller {
 		String senha = json.get("senha").asText();
 		
 		Usuario usuario = UsuarioDao.find.where().eq("email", email).findUnique();
-		
+		usuario.print();
 		if(usuario != null){
 			if(usuario.senha.equals(senha)){
 				result.put("Mensagem", "Bem vindo "+usuario.nome);

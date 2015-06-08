@@ -3,6 +3,14 @@
 
 # --- !Ups
 
+create table atividade (
+  id                        integer not null,
+  nome                      varchar(255),
+  grupo_usuario_id          varchar(255),
+  parametros_id             integer,
+  constraint pk_atividade primary key (id))
+;
+
 create table atividade_api (
   id                        integer not null,
   nome                      varchar(255),
@@ -23,6 +31,13 @@ create table parametro_api (
   nome                      varchar(255),
   valor                     varchar(255),
   constraint pk_parametro_api primary key (id))
+;
+
+create table parametros (
+  id                        integer not null,
+  entity_nome               varchar(255),
+  entity_id                 varchar(255),
+  constraint pk_parametros primary key (id))
 ;
 
 create table usuario (
@@ -63,11 +78,15 @@ create table viagem_usuario (
   usuario_id                     integer not null,
   constraint pk_viagem_usuario primary key (viagem_id, usuario_id))
 ;
+create sequence atividade_seq;
+
 create sequence atividade_api_seq;
 
 create sequence grupo_usuario_api_seq;
 
 create sequence parametro_api_seq;
+
+create sequence parametros_seq;
 
 create sequence usuario_seq;
 
@@ -75,10 +94,14 @@ create sequence usuario_api_seq;
 
 create sequence viagem_seq;
 
-alter table usuario add constraint fk_usuario_grupoUsuario_1 foreign key (grupo_usuario_id) references grupo_usuario_api (id);
-create index ix_usuario_grupoUsuario_1 on usuario (grupo_usuario_id);
-alter table usuario_api add constraint fk_usuario_api_grupoUsuario_2 foreign key (grupo_usuario_id) references grupo_usuario_api (id);
-create index ix_usuario_api_grupoUsuario_2 on usuario_api (grupo_usuario_id);
+alter table atividade add constraint fk_atividade_grupoUsuario_1 foreign key (grupo_usuario_id) references grupo_usuario_api (id);
+create index ix_atividade_grupoUsuario_1 on atividade (grupo_usuario_id);
+alter table atividade add constraint fk_atividade_parametros_2 foreign key (parametros_id) references parametros (id);
+create index ix_atividade_parametros_2 on atividade (parametros_id);
+alter table usuario add constraint fk_usuario_grupoUsuario_3 foreign key (grupo_usuario_id) references grupo_usuario_api (id);
+create index ix_usuario_grupoUsuario_3 on usuario (grupo_usuario_id);
+alter table usuario_api add constraint fk_usuario_api_grupoUsuario_4 foreign key (grupo_usuario_id) references grupo_usuario_api (id);
+create index ix_usuario_api_grupoUsuario_4 on usuario_api (grupo_usuario_id);
 
 
 
@@ -88,11 +111,15 @@ alter table viagem_usuario add constraint fk_viagem_usuario_usuario_02 foreign k
 
 # --- !Downs
 
+drop table if exists atividade cascade;
+
 drop table if exists atividade_api cascade;
 
 drop table if exists grupo_usuario_api cascade;
 
 drop table if exists parametro_api cascade;
+
+drop table if exists parametros cascade;
 
 drop table if exists usuario cascade;
 
@@ -102,11 +129,15 @@ drop table if exists viagem cascade;
 
 drop table if exists viagem_usuario cascade;
 
+drop sequence if exists atividade_seq;
+
 drop sequence if exists atividade_api_seq;
 
 drop sequence if exists grupo_usuario_api_seq;
 
 drop sequence if exists parametro_api_seq;
+
+drop sequence if exists parametros_seq;
 
 drop sequence if exists usuario_seq;
 

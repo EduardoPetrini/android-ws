@@ -4,9 +4,11 @@
  */
 package com.lp3;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
 import play.db.ebean.Model;
 /**
  *
@@ -18,6 +20,6 @@ public class UsuarioApi extends Model {
     public int id;
     public int idAplicacao;
     public String nome;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REFRESH)
     public GrupoUsuarioApi grupoUsuario;
 }

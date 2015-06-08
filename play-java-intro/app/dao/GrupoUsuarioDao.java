@@ -4,7 +4,6 @@ import play.db.ebean.Model;
 import play.db.ebean.Model.Finder;
 
 import com.lp3.GrupoUsuarioApi;
-import com.lp3.Usuario;
 
 public class GrupoUsuarioDao {
 

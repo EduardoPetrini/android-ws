@@ -1,9 +1,11 @@
 package controllers;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import play.mvc.BodyParser;
 import play.mvc.BodyParser.Json;
@@ -96,12 +98,39 @@ public class ViagemController extends Controller {
 		ObjectNode result = play.libs.Json.newObject();
 		
 		Viagem viagem = ViagemDao.find.byId(id);
+		Map<String, String> v = new java.util.HashMap();
+		try{
+			v.put("id",String.valueOf(viagem.id));
+			v.put("qtdePessoas",String.valueOf(viagem.qtdePessoas));
+			v.put("titulo",viagem.titulo);
+			v.put("status",viagem.status);
+			v.put("cidadeOrigem",viagem.cidadeOrigem);
+			v.put("cidadeDestino",viagem.cidadeDestino);
+			v.put("dataPartida",getDateFormated(viagem.dataPartida));
+			v.put("dataChegada",getDateFormated(viagem.dataChegada));
+			v.put("custoOrcado",String.valueOf(viagem.custoOrcado));
+			v.put("custoReal",String.valueOf(viagem.custoReal));
+			v.put("horaPartida",getHours(viagem.dataPartida));
+			v.put("horaChegada",getHours(viagem.dataChegada));
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		if(viagem != null){
-			result.put("Viagem", play.libs.Json.toJson(viagem));
+			result.put("Viagem",play.libs.Json.toJson(v));
 		}else{
 			result.put("Mensagem: ","Não há viagem para esse id");
 		}
 		return ok(result);
+	}
+	
+	public static String getDateFormated(Date date){
+		SimpleDateFormat format = new SimpleDateFormat("dd/mm/yyyy");
+		return format.format(date);
+	}
+	
+	public static String getHours(Date date){
+		SimpleDateFormat format = new SimpleDateFormat("HH:mm");
+		return format.format(date);
 	}
 	
 	public static Result orcar(){
