@@ -12,7 +12,7 @@ public static Finder<Integer, Viagem> find = new Model.Finder<>(Integer.class, V
 	
 	public static List<Viagem> findByUser(Integer userId) {
         return find.where()
-            .eq("usuarios.id", userId)
+            .eq("usuarioApps.id", userId)
             .findList();
     }
 }

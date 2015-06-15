@@ -14,9 +14,11 @@ import play.mvc.Result;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.lp3.Usuario;
+import com.lp3.UsuarioApp;
 import com.lp3.Viagem;
+import com.lp3.modelodominio.InstanciaAtividade;
 
+import dao.InstanciaAtividadeDao;
 import dao.UsuarioDao;
 import dao.ViagemDao;
 
@@ -37,9 +39,9 @@ public class ViagemController extends Controller {
 		viagem.custoOrcado = 0;
 		viagem.custoReal= 0;
 		Integer userId = json.get("usuarioId").asInt();
-		Usuario user = UsuarioDao.find.byId(userId);
-		viagem.usuarios = new ArrayList<Usuario>();
-		viagem.usuarios.add(user);
+		UsuarioApp user = UsuarioDao.find.byId(userId);
+		viagem.usuarioApps = new ArrayList<UsuarioApp>();
+		viagem.usuarioApps.add(user);
 		
 		viagem.save();
 		
@@ -148,6 +150,17 @@ public class ViagemController extends Controller {
 			result.put("Mensagem: ","Não há viagem para esse id");
 		}
 		
+		return ok(result);
+	}
+	
+	public static Result update(){
+		JsonNode json = request().body().asJson();
+		Viagem viagem = ViagemDao.find.byId(json.get("id").asInt());
+		InstanciaAtividade instanciaAtividade = InstanciaAtividadeDao.find.byId(json.get("idAtividade").asInt());
+		
+		updateViagemByAtividadeName(viagem, instanciaAtividade, json);
+		
+		ObjectNode result = play.libs.Json.newObject();
 		return ok(result);
 	}
 }

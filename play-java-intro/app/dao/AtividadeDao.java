@@ -5,8 +5,7 @@ import java.util.List;
 import play.db.ebean.Model;
 import play.db.ebean.Model.Finder;
 
-import com.lp3.Atividade;
-import com.lp3.Viagem;
+import com.lp3.modelodominio.Atividade;
 
 public class AtividadeDao {
 

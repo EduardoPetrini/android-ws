@@ -2,8 +2,10 @@ package com.lp3;
 
 import javax.persistence.Entity;
 
+import com.lp3.modelodominio.Usuario;
+
 @Entity
-public class Usuario extends UsuarioApi{
+public class UsuarioApp extends Usuario{
 
 	public String email;
 	public String senha;

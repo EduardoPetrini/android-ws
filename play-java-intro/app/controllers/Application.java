@@ -4,25 +4,30 @@ import java.util.Date;
 
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.*;
+import views.html.index;
 
-import com.lp3.Atividade;
-import com.lp3.GrupoUsuarioApi;
-import com.lp3.Parametros;
-import com.lp3.Usuario;
+import com.lp3.UsuarioApp;
 import com.lp3.Viagem;
+import com.lp3.modelodominio.Atividade;
+import com.lp3.modelodominio.GrupoUsuario;
+import com.lp3.modelodominio.InstanciaAtividade;
+import com.lp3.modelodominio.InstanciaParametro;
+import com.lp3.modelodominio.Parametro;
 
 import dao.AtividadeDao;
 import dao.GrupoUsuarioDao;
+import dao.InstanciaAtividadeDao;
+import dao.InstanciaParametroDao;
+import dao.ParametroDao;
 import dao.UsuarioDao;
 import dao.ViagemDao;
 
 public class Application extends Controller {
 
     public static Result index() {
-    	GrupoUsuarioApi gp = GrupoUsuarioDao.find.where().eq("idBpms", "1").findUnique();
+    	GrupoUsuario gp = GrupoUsuarioDao.find.where().eq("idBpms", "1").findUnique();
     	if(gp == null){
-    		gp = new GrupoUsuarioApi();
+    		gp = new GrupoUsuario();
     		gp.idBpms = "1";
     		gp.nome = "AUTORIZADOR";
     		gp.save();
@@ -30,7 +35,7 @@ public class Application extends Controller {
     	
     	gp = GrupoUsuarioDao.find.where().eq("idBpms", "2").findUnique();
     	if(gp == null){
-    		gp = new GrupoUsuarioApi();
+    		gp = new GrupoUsuario();
     		gp.idBpms = "2";
     		gp.nome = "MOTORISTA";
     		gp.save();
@@ -38,7 +43,7 @@ public class Application extends Controller {
     	
     	gp = GrupoUsuarioDao.find.where().eq("idBpms", "3").findUnique();
     	if(gp == null){
-    		gp = new GrupoUsuarioApi();
+    		gp = new GrupoUsuario();
     		gp.idBpms = "3";
     		gp.nome = "SOLICITANTE";
     		gp.save();
@@ -46,15 +51,15 @@ public class Application extends Controller {
     	
     	gp = GrupoUsuarioDao.find.where().eq("idBpms", "4").findUnique();
     	if(gp == null){
-    		gp = new GrupoUsuarioApi();
+    		gp = new GrupoUsuario();
     		gp.idBpms = "4";
     		gp.nome = "TRANSPORTADOR";
     		gp.save();
     	}
     	
-    	Usuario user = UsuarioDao.find.where().eq("nome", "aut").findUnique();
+    	UsuarioApp user = UsuarioDao.find.where().eq("nome", "aut").findUnique();
     	if(user == null){
-    		user = new Usuario();
+    		user = new UsuarioApp();
     		user.nome = "aut";
     		user.email = "aut@email";
     		user.senha = "qwe";
@@ -64,7 +69,7 @@ public class Application extends Controller {
     	
     	user = UsuarioDao.find.where().eq("nome", "mot").findUnique();
     	if(user == null){
-    		user = new Usuario();
+    		user = new UsuarioApp();
     		user.nome = "mot";
     		user.email = "mot@email";
     		user.senha = "qwe";
@@ -74,7 +79,7 @@ public class Application extends Controller {
     	
     	user = UsuarioDao.find.where().eq("nome", "sol").findUnique();
     	if(user == null){
-    		user = new Usuario();
+    		user = new UsuarioApp();
     		user.nome = "sol";
     		user.email = "sol@email";
     		user.senha = "qwe";
@@ -84,7 +89,7 @@ public class Application extends Controller {
     	
     	user = UsuarioDao.find.where().eq("nome", "tra").findUnique();
     	if(user == null){
-    		user = new Usuario();
+    		user = new UsuarioApp();
     		user.nome = "tra";
     		user.email = "tra@email";
     		user.senha = "qwe";
@@ -105,17 +110,11 @@ public class Application extends Controller {
     		viagem.save();
     	}
     	
-    	Atividade atv = AtividadeDao.find.where().eq("nome", "ORÇAMENTO").findUnique();
-    	if(atv == null){
-    		atv = new Atividade();
-    		atv.nome = "ORÇAMENTO";
-    		atv.grupoUsuario = GrupoUsuarioDao.find.where().eq("idBpms", "4").findUnique();
-    		atv.parametros = new Parametros();
-    		atv.parametros.entityNome = "com.lp3.Viagem";
-    		atv.parametros.entityId = String.valueOf(viagem.id);
-    		atv.parametros.save();
-    		atv.save();
-    	}
+//    	Parametro parametro = ParametroDao.find.where().eq("idBpms", "").findUnique();
+//    	InstanciaParametro instParametro = InstanciaParametroDao.find.where().eq("idBpms","").findUnique();
+//    	Atividade atividade = AtividadeDao.find.where().eq("idBpms", "").findUnique();
+//    	InstanciaAtividade atv = InstanciaAtividadeDao.find.where().eq("idBpms", "").findUnique();
+    	
     	
         return ok(index.render());
     }

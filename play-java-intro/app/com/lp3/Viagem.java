@@ -25,7 +25,7 @@ public class Viagem extends Model{
 	public double custoOrcado;
 	public double custoReal;
 	@ManyToMany(cascade = CascadeType.REFRESH)
-	public List<Usuario> usuarios;
+	public List<UsuarioApp> usuarioApps;
 		
 	
 }

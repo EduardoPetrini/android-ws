@@ -11,6 +11,7 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 #For user register
 POST    /usuario/cadastrar          controllers.UsuarioController.cadastrar()
 POST    /viagem/cadastrar          controllers.ViagemController.cadastrar()
+POST    /viagem/update          controllers.ViagemController.update()
 
 GET    /viagem/getAll          controllers.ViagemController.getAll()
 GET    /usuario/getAll          controllers.UsuarioController.getAll()
